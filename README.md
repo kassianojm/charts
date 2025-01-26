@@ -59,5 +59,4 @@ This script dynamically generates performance and resource utilization charts ba
 
 ---
 
-## **Folder Structure**
 
