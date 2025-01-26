@@ -1,0 +1,26 @@
+loss=5
+
+
+	time=1800
+	msgsize=10000
+	th=1000
+	#to create a batch, just add 100 * msgsize
+	msgbuffer=$((msgsize))
+	#each executor receives one receiver - more than one incurrs in performance loss.
+
+	#default parallelism hardcode in JavaClass
+	SparkParal=1024
+
+	SparkWindow=2000
+	SparkBclockInterval=400
+	bpini=2000
+
+	Nsockets=$1
+	SparkReceivers=$1
+
+	qosmax=$2
+	loss=$3
+
+	#Number of conc DAGs - more than one incurrs in performance loss due Problems in internals of Spark
+	SparkConcBlock=1
+
